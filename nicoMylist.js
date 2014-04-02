@@ -13,7 +13,7 @@ javascript: (function () {
 		open(H.replace(/.*?(bk[0-9]+).*/, 'http://www.nicovideo.jp/mylist_add/book/$1'), '_blank', 'width=500,height=360')
 	} else if (H.match(/(www|i|sp)\.nicovideo\.jp\/watch\/[0-9]+/)) {
 		AD = D.getElementById("watchAPIDataContainer");
-		open(AD.innerHTML.replace(/.+videoId.+?([a-zA-Z]{0,2}[0-9]{1,8})".+/, 'http://www.nicovideo.jp/mylist_add/video/$1'), '_blank', 'width=500,height=360')
+		open(AD.innerHTML.replace(/.+videoId.+?([a-zA-Z]{0,2}[0-9]{1,8}).+/, 'http://www.nicovideo.jp/mylist_add/video/$1'), '_blank', 'width=500,height=360')
 	} else if (H.match(/(www|i|sp)\.nicovideo\.jp\/watch\/..[0-9]+/)) {
 		open(H.replace(/.*?([a-zA-Z]{0,2}[0-9]+).*/, 'http://www.nicovideo.jp/mylist_add/video/$1'), '_blank', 'width=500,height=360')
 	} else if (H.match(/www\.nicovideo\.jp\/(?:mylist\/\d+|my\/mylist(?:\/#\/\d+)?|(?:user\/\d+|my)\/video)/)) {
