@@ -46,7 +46,7 @@ javascript: (function () {
 		} else if (t.match(/.*[0-9]+/)) {
 			open(t.replace(/.*?([a-zA-Z]{0,2}[0-9]+).*/, 'http://www.nicovideo.jp/mylist_add/video/$1'), '_blank', 'width=500,height=360')
 		} else {
-			window.alert('ニコニコ動画用です。何かあったら\nhttps://twitter.com/uzuky \nhttp://nico.ms/ar201595 \nまで\n　v20131207');
+			window.alert('ニコニコ動画用です。何かあったら\nhttps://twitter.com/uzuky \nhttp://nico.ms/ar201595 \nまで\n　v20140402');
 		}
 	}
 })();
