@@ -37,7 +37,7 @@ javascript: (function () {
 		//alert(scrH);
 		//alert(wSize); muri
 		for (i = 0; i < b.length; i++) {
-			c[i] = b[i].innerHTML.replace(/href="watch\/(..\d+)(?:\?.+)?"(>(?:\n\s+)?<img.+?alt="").+?("http:\/\/.+?smilevideo\.jp\/smile\?i=\d+").+?(>(?:\n\s+)?(?:vinfo_length"><span>|videoTime">))/, 'href="/mylist_add/video/$1" onclick="window.open(\'/mylist_add/video/$1\', \'_blank\', \'width=500,height=360\'); return false;"$2 src=$3$4+');
+			c[i] = b[i].innerHTML.replace(/href="watch\/(..\d+)(?:\?.+)?"(>(?:\n\s*)?<img.+?alt="").+?("http:\/\/.+?smilevideo\.jp\/smile\?i=\d+").+?(>(?:\n\s*)?(.+?:vinfo_length"><span>|videoTime">))/, 'href="/mylist_add/video/$1" onclick="window.open(\'/mylist_add/video/$1\', \'_blank\', \'width=500,height=360\'); return false;"$2 src=$3$4+');
 			b[i].innerHTML = c[i];
 		}
 	} else {
