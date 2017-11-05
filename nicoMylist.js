@@ -42,7 +42,7 @@ javascript: (function () {
 		//alert(scrH);
 		//alert(wSize); muri
 		for (i = 0; i < b.length; i++) {
-			c[i] = b[i].innerHTML.replace(/href="watch\/(..\d+)(?:\?.+?)?"(>(?:\n\s*)?)<img.+?("http:\/\/[^"]+?smilevideo\.jp\/smile\?i=\d+").*?>(.*?(?:\n\s*)?.*?(?:vinfo_length"><span>|videoTime">))/,'onclick="window.open(\'/mylist_add/video/$1\', \'_blank\', \'width=500,height=360\'); return false;" href="/mylist_add/video/$1"$2<img class="img_std96" alt="" src=$3>$4+');
+			c[i] = b[i].innerHTML.replace(/a href="watch\/(..\d+)(?:\?.+?)?"(>(?:\n\s*)?)<img.+?("http:\/\/[^"]+?smilevideo\.jp\/smile\?i=\d+").*?>(.*?(?:\n\s*)?.*?(?:vinfo_length"><span>|videoTime">))/,'a onclick="window.open(\'/mylist_add/video/$1\', \'_blank\', \'width=500,height=360\'); return false;" href="/mylist_add/video/$1"$2<img class="img_std96" alt="" src=$3>$4+');
 			b[i].innerHTML = c[i];
 		}
 	} else {
