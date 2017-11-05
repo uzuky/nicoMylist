@@ -13,7 +13,12 @@ javascript: (function () {
 		window.open(H.replace(/.*?(bk\d+).*/, 'http://www.nicovideo.jp/mylist_add/book/$1'), '_blank', 'width=500,height=360')
 	} else if (H.match(/(www|i)\.nicovideo\.jp\/watch\/\d+/)) {
 		AD = D.getElementById("watchAPIDataContainer");
-		window.open(AD.innerHTML.replace(/.+videoId.+?([a-zA-Z]{0,2}\d{1,8}).+/, 'http://www.nicovideo.jp/mylist_add/video/$1'), '_blank', 'width=500,height=360')
+		if (AD != null) {
+			window.open(AD.innerHTML.replace(/.+videoId.+?([a-zA-Z]{0,2}\d{1,8}).+/, 'http://www.nicovideo.jp/mylist_add/video/$1'), '_blank', 'width=500,height=360')
+		} else {
+			AD = D.getElementById("MainVideoPlayer");
+			window.open(AD.innerHTML.replace(/.+\/nicovideo\-([a-zA-Z]{0,2}\d{1,8}).+/, 'http://www.nicovideo.jp/mylist_add/video/$1'), '_blank', 'width=500,height=360')
+		}
 	} else if (H.match(/sp\.nicovideo\.jp\/watch\/\d+/)) {
 		DC = D.getElementById("jsDataContainer");
 		window.open(DC.outerHTML.replace(/.+data-video_id.+?([a-zA-Z]{0,2}\d{1,8}).+/, 'http://www.nicovideo.jp/mylist_add/video/$1'), '_blank')
