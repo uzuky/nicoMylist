@@ -54,7 +54,7 @@ javascript: (function () {
 		} else if (t.match(/.*\d+/)) {
 			window.open(t.replace(/.*?([a-zA-Z]{0,2}\d+).*/, 'http://www.nicovideo.jp/mylist_add/video/$1'), '_blank', 'width=500,height=360')
 		} else {
-			window.alert('ニコニコ動画用です。何かあったら\nhttps://twitter.com/uzuky \nhttp://nico.ms/ar201595 \nまで\n　v20140402');
+			window.alert('ニコニコ動画用です。何かあったら\nhttps://mstdn.jp/@uzuky \nhttp://nico.ms/ar201595 \nまで\n　v20171106 (松岡修造の日(火))');
 		}
 	}
 })();
